@@ -31,7 +31,6 @@ Y = iris.target # ラベル
 Y = np.array(pd.get_dummies(Y)) # ダミー化
 X_test, X_train, Y_test, Y_train = train_test_split(X,Y,test_size=0.5)
 print "model lerning(/・ω・)/・・・"
-# 回せば、回すほどよい
 model.fit(X_train, Y_train, nb_epoch=100) 
 print "test inputing(/・ω・)/・・・"
 res = model.predict(X_test)
