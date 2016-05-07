@@ -14,11 +14,9 @@ from sklearn.datasets import load_iris
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import classification_report
 
-# 次元：入力層4, 中間層30*2, 出力層3
+# 次元：入力層4, 中間層10, 出力層3
 model = Sequential()
-model.add(Dense(output_dim=30, input_dim=4))
-model.add(Activation("relu"))
-model.add(Dense(output_dim=30))
+model.add(Dense(output_dim=10, input_dim=4))
 model.add(Activation("relu"))
 model.add(Dense(output_dim=3))
 model.add(Activation("softmax"))
